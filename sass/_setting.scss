@@ -1,0 +1,50 @@
+/*==========================================================================
+
+# 変数定義
+
+========================================================================== */
+
+/*
+# カラー
+==================================== */
+$main-color: #fff;
+$secondary-color: #f2f2f2;
+$accent-color: #C3A087;
+$text-color: #485253;
+
+/*
+# メディアクエリ
+==================================== */
+/* インナー幅 */
+$pc-inner: 1320px;
+$sp-inner: 335px;
+
+/*
+# ブレイクポイント
+==================================== */
+$breakpoints: (
+  //キー : 値
+  "sp": "(max-width: 599px)",
+  "tab": "(min-width: 600px) and (max-width: 1024px)",
+  "pc": "(min-width: 1025px) and (max-width: 1399px)",
+  "pc-lg": "(min-width: 1400)"
+) !default;
+
+/*
+# メディアクエリ
+==================================== */
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/*
+# z-index
+==================================== */
+$header: 20;
+$hamburger-background: 23;
+$hamburger-box: 24;
+$hamburger-icon: 25;
+$modal-overlay: 30;
+$modal: 35;
